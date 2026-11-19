@@ -129,11 +129,11 @@ fi
 log "victim enode: $ENODE"
 
 # --- 4. unduh genesis EL (untuk fork ID attacker) -----------------------------
-log "mengunduh genesis EL: kurtosis files download $ENCLAVE el-genesis-data"
+log "mengunduh genesis EL: kurtosis files download $ENCLAVE el_cl_genesis_data"
 rm -rf "$RESULTS_DIR/genesis-download"
-kurtosis files download "$ENCLAVE" el-genesis-data "$RESULTS_DIR/genesis-download" 2>&1 | tee -a "$RESULTS"
+kurtosis files download "$ENCLAVE" el_cl_genesis_data "$RESULTS_DIR/genesis-download" 2>&1 | tee -a "$RESULTS"
 GENESIS_JSON="$(find "$RESULTS_DIR/genesis-download" -name 'genesis.json' | head -1 || true)"
-[ -n "$GENESIS_JSON" ] || die "genesis.json tidak ditemukan di artefak el-genesis-data (isi: $(ls -R "$RESULTS_DIR/genesis-download" | head -20))"
+[ -n "$GENESIS_JSON" ] || die "genesis.json tidak ditemukan di artefak el_cl_genesis_data (isi: $(ls -R "$RESULTS_DIR/genesis-download" | head -20))"
 cp "$GENESIS_JSON" "$RESULTS_DIR/genesis.json"
 python3 -c "
 import json
