@@ -1,0 +1,70 @@
+# Parameter ethereum-package untuk PoC Kurtosis K1 snap (EF).
+#
+# 1 partisipan: geth EL (image KUSTOM dari commit b05eff09 — commit yang
+# diaudit) + lighthouse CL (image default paket). Tanpa additional service
+# apa pun (tanpa spammer/monitoring — beban latar belakang merusak atribusi
+# pengukuran CPU victim).
+#
+# Dipakai dengan:
+#   kurtosis run --enclave <nama> \
+#     github.com/ethpandaops/ethereum-package@6.1.0 \
+#     --args-file network-params.yaml --image-download missing
+#
+# CATATAN: --image-download HARUS `missing`, bukan `always` — image geth
+# kustom hanya ada lokal di runner; `always` akan mencoba pull dari
+# registry dan gagal.
+
+participants:
+  - el_type: geth
+    el_image: poc-snap-geth:b05eff09
+    cl_type: lighthouse
+    # cl_image dibiarkan default paket (jangan override tanpa alasan).
+    count: 1
+    # Batas resource (CPU millicore, RAM MB). Total plafon ~3.500 millicore
+    # + engine Kurtosis, di bawah 4.000 millicore runner.
+    # CPU-seconds yang diukur tidak rusak oleh throttling (kerja yang sama
+    # tetap menghabiskan CPU-seconds yang sama).
+    el_min_cpu: 500
+    el_max_cpu: 2000
+    el_min_mem: 512
+    el_max_mem: 4096
+    cl_min_cpu: 200
+    cl_max_cpu: 1000
+    cl_min_mem: 256
+    cl_max_mem: 2048
+    vc_min_cpu: 100
+    vc_max_cpu: 500
+    vc_min_mem: 128
+    vc_max_mem: 1024
+
+network_params:
+  network: "kurtosis"
+  network_id: "3151908"
+  # Slot 12 detik (default paket, paling aman). 130 blok ≈ 26 menit.
+  # Opsi percepatan yang pernah dipakai demo lain: 4 (130 blok ≈ 9 menit).
+  seconds_per_slot: 12
+  genesis_delay: 20
+  # Validator sedikit = genesis lebih cepat + beban CL lebih kecil.
+  # 32 validator pada 1 node tetap cukup untuk finalisasi (semua
+  # validator ada di node yang sama; finalisasi butuh 2/3 atestasi).
+  num_validator_keys_per_node: 32
+  # Semua fork aktif sejak genesis (epoch 0) — chain config sedekat
+  # mungkin dengan AllDevChainProtocolChanges, TAPI fork ID attacker tetap
+  # dihitung dari genesis.json asli (lihat attacker/main.go flag
+  # -genesis-file), karena fork berbasis waktu = genesis time, bukan 0.
+  altair_fork_epoch: 0
+  bellatrix_fork_epoch: 0
+  capella_fork_epoch: 0
+  deneb_fork_epoch: 0
+  electra_fork_epoch: 0
+  fulu_fork_epoch: 0
+  # gloas_fork_epoch / heze_fork_epoch: JANGAN diaktifkan (default paket
+  # = dimatikan, 18446744073709551615). Bila diaktifkan, attacker harus
+  # tahu — dan genesis.json tetap menjadi sumber kebenaran.
+  preset: "mainnet"
+  prefunded_accounts: {}
+
+# TIDAK ADA additional service: tanpa spammer, Grafana, Prometheus, dora,
+# assertoor, mev-boost. Setiap container tambahan = CPU latar belakang
+# yang mengotori pengukuran CPU victim.
+additional_services: []
