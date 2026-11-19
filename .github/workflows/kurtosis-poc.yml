@@ -1,0 +1,177 @@
+# DRAF — GitHub Actions workflow: PoC Kurtosis untuk EF K1 snap
+#
+# !!! BACA RESEARCH.md BAGIAN "RISIKO #1 — DISCLOSURE PUBLIK" SEBELUM MENJALANKAN !!!
+# Repo ini PUBLIK: kode PoC + log run + artefak hasil terlihat siapa pun di
+# internet sejak repo/run dibuat — SEBELUM laporan dikirim ke EF. Workflow ini
+# TIDAK AKAN jalan kecuali input `confirm_public_disclosure` diisi `true`
+# secara eksplisit pada setiap pemicuan manual.
+#
+# Yang dilakukan workflow ini (semuanya di dalam repo ini / runner ini):
+#   1. Build image geth kustom dari ethereum/go-ethereum commit b05eff09
+#      (commit yang diaudit; BUKAN image release paket).
+#   2. Jalankan devnet Kurtosis 1 partisipan (geth EL + lighthouse CL)
+#      dari ethpandaops/ethereum-package@6.1.0.
+#   3. Tunggu chain mencapai target blok (default 130 blok).
+#   4. Jalankan attacker snap (proses terpisah di runner host) ke node geth
+#      devnet: kontrol 10 / 1.000 / 10.000 akun bogus + utama 100.000 akun
+#      bogus (2 run). CPU victim diukur dari luar via docker exec + /proc.
+#   5. Unggah log + hasil sebagai artefak; bersihkan enclave.
+#
+# Tidak ada: login ke layanan apa pun, secret, pembayaran, publikasi di luar
+# repo ini. Semua image publik; tidak ada kredensial yang dipakai.
+#
+# File ini diletakkan di .github/workflows/kurtosis-poc.yml saat repo dibuat.
+
+name: kurtosis-poc-snap-k1
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_public_disclosure:
+        description: >
+          SAYA PAHAM: repo ini PUBLIK — kode PoC, log run, dan artefak hasil
+          akan terlihat siapa pun di internet (pengungkapan publik atas
+          kerentanan yang belum dilaporkan ke EF). Isi true untuk lanjut.
+        type: boolean
+        required: true
+        default: false
+      mode:
+        description: "smoke = 10 blok + 10 akun (uji pipa); full = 130 blok + serangan penuh"
+        type: choice
+        options: [full, smoke]
+        default: full
+      target_blocks:
+        description: "Target jumlah blok sebelum serangan (mode full)"
+        type: number
+        default: 130
+
+permissions:
+  contents: write
+
+jobs:
+  kurtosis-poc:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300 # di bawah batas keras GitHub 6 jam/job
+    env:
+      ENCLAVE: snap-k1-poc
+      PACKAGE_REF: github.com/ethpandaops/ethereum-package@6.1.0
+      GETH_COMMIT: b05eff09c611accbd7e26bd491294177ec606c2a
+      GO_VERSION: "1.25.4"
+    steps:
+      - name: Guard — konfirmasi disclosure publik
+        if: ${{ inputs.confirm_public_disclosure != true }}
+        run: |
+          echo "::error::DIBATALKAN: workflow ini hanya jalan bila input confirm_public_disclosure=true."
+          echo "Repo ini PUBLIK — lihat RESEARCH.md risiko #1 sebelum mengonfirmasi."
+          exit 1
+
+      - name: Checkout repo draf PoC
+        uses: actions/checkout@v4
+
+      - name: Info runner + ruang disk awal
+        run: |
+          uname -a; nproc; free -h; df -h
+          docker --version; docker system df || true
+
+      - name: Bebaskan ruang disk (hapus tool cache besar yang tidak dipakai)
+        run: |
+          # Pola standar untuk runner ubuntu yang kehabisan disk.
+          # JANGAN hapus docker / go bila sudah terinstal — hanya cache tool lain.
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost \
+            /opt/hostedtoolcache/CodeQL 2>/dev/null || true
+          sudo apt-get clean || true
+          df -h
+
+      - name: Gagal cepat bila disk < 8 GB
+        run: |
+          FREE_GB=$(df --output=avail -BG / | tail -1 | tr -dc '0-9')
+          echo "Ruang kosong: ${FREE_GB} GB"
+          if [ "$FREE_GB" -lt 8 ]; then
+            echo "::error::Ruang disk kosong < 8 GB — batalkan, lihat RESEARCH.md risiko #3."
+            exit 1
+          fi
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: false
+
+      - name: Install Kurtosis CLI (repo apt BARU — Gemfury sudah mati)
+        run: |
+          echo "deb [trusted=yes] https://sdk.kurtosis.com/kurtosis-cli-release-artifacts/ /" \
+            | sudo tee /etc/apt/sources.list.d/kurtosis.list
+          sudo apt-get update
+          sudo apt-get install -y kurtosis-cli
+          kurtosis version
+          kurtosis analytics disable
+          # Tarik image engine lebih awal (pola CI ethereum-package);
+          # bila Docker Hub rate-limit, gagal di sini, bukan di tengah run.
+          KURTOSIS_VERSION=$(kurtosis version | grep -o 'Version:[[:space:]]*[^[:space:]]*' | cut -d: -f2 | tr -d ' ')
+          echo "Kurtosis version: ${KURTOSIS_VERSION}"
+          docker pull "kurtosistech/engine:${KURTOSIS_VERSION}" || \
+            docker pull "docker.ethquokkaops.io/dh/kurtosistech/engine:${KURTOSIS_VERSION}"
+
+      - name: Clone go-ethereum @ b05eff09 (shallow, 1 commit)
+        run: |
+          git init go-ethereum
+          cd go-ethereum
+          git remote add origin https://github.com/ethereum/go-ethereum.git
+          git fetch --depth 1 origin "${GETH_COMMIT}"
+          git checkout "${GETH_COMMIT}"
+          git log -1 --oneline
+          du -sh .
+
+      - name: Build image geth kustom (poc-snap-geth:b05eff09)
+        run: |
+          docker build -f geth.Dockerfile -t poc-snap-geth:b05eff09 .
+          docker images poc-snap-geth:b05eff09
+          docker image prune -f # buang stage builder yang menggantung
+          df -h; docker system df
+
+      - name: Build attacker snap
+        run: |
+          cd attacker
+          go build -trimpath -ldflags="-s -w" -o ../snap-attacker .
+          ls -la ../snap-attacker
+          ../snap-attacker -h 2>&1 | head -20 || true
+
+      - name: Jalankan PoC Kurtosis end-to-end
+        env:
+          MODE: ${{ inputs.mode }}
+          TARGET_BLOCKS: ${{ inputs.target_blocks }}
+        run: |
+          chmod +x run-kurtosis-poc.sh
+          set -o pipefail
+          ./run-kurtosis-poc.sh "$MODE" "$TARGET_BLOCKS" 2>&1 | tee kurtosis-poc.log
+
+      - name: Push results to repo (results branch)
+        if: always()
+        continue-on-error: true
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add poc-results kurtosis-poc.log 2>/dev/null || true
+          if git commit -m "Kurtosis PoC results (run ${GITHUB_RUN_ID})"; then
+            git push origin HEAD:results --force
+          else
+            echo "Nothing to commit — no results to push."
+          fi
+
+      - name: Unggah artefak hasil (log + hasil + genesis + params)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kurtosis-poc-results
+          path: |
+            poc-results/
+            kurtosis-poc.log
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Cleanup enclave (selalu jalan)
+        if: always()
+        run: |
+          kurtosis enclave rm -f "${ENCLAVE}" || true
+          kurtosis clean -a || true
+          docker system df || true
