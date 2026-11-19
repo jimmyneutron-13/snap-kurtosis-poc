@@ -44,10 +44,13 @@ network_params:
   # Opsi percepatan yang pernah dipakai demo lain: 4 (130 blok ≈ 9 menit).
   seconds_per_slot: 12
   genesis_delay: 20
-  # Validator sedikit = genesis lebih cepat + beban CL lebih kecil.
-  # 32 validator pada 1 node tetap cukup untuk finalisasi (semua
-  # validator ada di node yang sama; finalisasi butuh 2/3 atestasi).
-  num_validator_keys_per_node: 32
+  # 128 validator = default paket. WAJIB ≥128 pada 1 node: ethereum-package
+  # 6.1.0 menolak network Fulu bila tidak ada supernode, tidak ada node
+  # dengan 128+ validator, dan perfect_peerdas_enabled mati (run #1 gagal
+  # di validasi Starlark ini saat memakai 32). 128 validator pada 1 node
+  # tetap cukup untuk finalisasi (semua validator ada di node yang sama;
+  # finalisasi butuh 2/3 atestasi).
+  num_validator_keys_per_node: 128
   # Semua fork aktif sejak genesis (epoch 0) — chain config sedekat
   # mungkin dengan AllDevChainProtocolChanges, TAPI fork ID attacker tetap
   # dihitung dari genesis.json asli (lihat attacker/main.go flag

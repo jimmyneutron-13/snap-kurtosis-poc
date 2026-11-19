@@ -27,6 +27,10 @@
 #
 # !!! BACA RESEARCH.md RISIKO #1 SEBELUM MENJALANKAN DI REPO PUBLIK !!!
 set -u
+# pipefail: tanpa ini, `kurtosis run ... | tee` selalu lapor rc=0 (rc-nya tee),
+# sehingga kegagalan kurtosis run (mis. error Starlark run #1) baru ketahuan
+# belakangan di port print. Dengan pipefail, rc pipeline = rc kurtosis.
+set -o pipefail
 cd "$(dirname "$0")"
 
 MODE="${1:-full}"
@@ -73,10 +77,16 @@ docker image inspect poc-snap-geth:b05eff09 >/dev/null 2>&1 || die "image poc-sn
 log "menjalankan devnet: kurtosis run --enclave $ENCLAVE $PACKAGE_REF"
 kurtosis run --enclave "$ENCLAVE" "$PACKAGE_REF" \
   --args-file "$ARGS_FILE" --image-download missing 2>&1 | tee -a "$RESULTS"
-log "kurtosis run selesai (rc=$?)"
+KURTOSIS_RC="${PIPESTATUS[0]}"
+log "kurtosis run selesai (rc=$KURTOSIS_RC)"
+[ "$KURTOSIS_RC" -eq 0 ] || die "kurtosis run gagal (rc=$KURTOSIS_RC) — lihat error Starlark di atas (mis. validasi fork/validator)"
 
 log "service di enclave:"
 kurtosis enclave inspect "$ENCLAVE" 2>&1 | tee -a "$RESULTS"
+# Fail cepat bila service EL tidak ada (mis. kurtosis run gagal validasi
+# Starlark — enclave kosong). Jangan lanjut ke port print yang pasti gagal.
+kurtosis enclave inspect "$ENCLAVE" 2>/dev/null | grep -q "$EL_SERVICE" \
+  || die "service EL $EL_SERVICE tidak ada di enclave — kurtosis run gagal (cek error Starlark di atas)"
 # Fail bila ada service tambahan yang tidak diminta (spammer/monitoring
 # akan mengotori pengukuran CPU — lihat RESEARCH.md risiko #9).
 UNEXPECTED="$(kurtosis enclave inspect "$ENCLAVE" 2>/dev/null | grep -E 'spamoor|tx-fuzz|grafana|prometheus|dora|assertoor|mev-boost' || true)"
