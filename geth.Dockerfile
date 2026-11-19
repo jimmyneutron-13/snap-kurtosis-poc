@@ -14,14 +14,20 @@
 # entrypoint image/launcher). Bila build/run gagal karena tool hilang,
 # tambahkan paket yang dibutuhkan di stage runtime.
 
+# Perbaikan run #2 (19 Nov 2026): binary dibangun statis (CGO_ENABLED=0)
+# karena binary glibc dari bookworm tidak bisa jalan di alpine (musl) —
+# run #2 gagal "sh: geth: not found". Stage runtime menjalankan
+# `geth version` agar docker build gagal cepat bila binary rusak.
+#
 # syntax=docker/dockerfile:1
 FROM golang:1.25.4-bookworm AS builder
 WORKDIR /src
 COPY go-ethereum/ ./
 RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/go/pkg/mod \
-    go build -trimpath -ldflags="-s -w" -o /out/geth ./cmd/geth
+    CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/geth ./cmd/geth
 
 FROM alpine:3.20
 COPY --from=builder /out/geth /usr/local/bin/geth
+RUN geth version
 ENTRYPOINT ["geth"]
