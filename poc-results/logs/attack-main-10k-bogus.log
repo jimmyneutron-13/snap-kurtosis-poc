@@ -1,0 +1,11 @@
+POC victim chainId=3151908 genesis=0xd4baa10b781e9aa9f0a2629b2dd0034682a16bda1feedcbfdae06360f0bd86ac headNumber=131 headHash=0x4fa0877acb9854f214a088eba5a1181e0b7a4769e4946bd03fba5dab92a7db5d headStateRoot=0xcf985f50aa9d5ee1e8dbbd06d4bd2c271903c818070e435dc39abbd2ee00baa9
+POC using -enode flag, skipping admin_nodeInfo
+POC victim enode=enode://5bea00651b57cf454d6fd229ce5a4eee12d2696257b090e65272d8a92a56d5cc253b2d5be620ff6fce8e870554932e37016f3d51637c8d9ea22375fa08639572@127.0.0.1:32774
+POC request mode=bogus accounts=10000 bytesLimit=2097152 wireSize=330048 (maxMessageSize=10485760)
+POC fork ID from genesis file poc-results/genesis.json (chainId 3151908)
+POC forkID=bbb594c3
+POC attacker listening, dialing victim...
+POC eth handshake ok: remote proto=69 network=3151908 genesis=0xd4baa10b781e9aa9f0a2629b2dd0034682a16bda1feedcbfdae06360f0bd86ac forkHash=bbb594c3 latestBlock=131
+POC GetStorageRanges sent at 2026-11-19T11:05:56.18505906Z (send took 3.0138ms)
+POC RESULT mode=bogus accounts=10000 wall=277.409079ms slotsReturned=0 respBytes=4 reqWireSize=330048
+POC RESULT perAccount=27.74µs

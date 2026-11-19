@@ -1,0 +1,200 @@
+[el-1-geth-lighthouse] INFO [11-19|10:59:41.003] Starting work on payload                 id=0x03b5a0bc42b3c7d1
+[el-1-geth-lighthouse] INFO [11-19|10:59:41.004] Updated payload                          id=0x03b5a0bc42b3c7d1 number=101 hash=23052c..bbeaa0 txs=0 withdrawals=0 gas=0 fees=0 root=0a3bc6..f174a8 elapsed="405.327µs"
+[el-1-geth-lighthouse] INFO [11-19|10:59:45.006] Stopping work on payload                 id=0x03b5a0bc42b3c7d1 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|10:59:45.019] Imported new potential chain segment     number=101 hash=23052c..bbeaa0 blocks=1 txs=0 mgas=0.000 elapsed="623.275µs" mgasps=0.000 triediffs=447.64KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|10:59:45.023] Chain head was updated                   number=101 hash=23052c..bbeaa0 root=0a3bc6..f174a8 elapsed="44.363µs"
+[el-1-geth-lighthouse] WARN [11-19|10:59:45.023] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|10:59:53.002] Starting work on payload                 id=0x031c5bc0748b31fa
+[el-1-geth-lighthouse] INFO [11-19|10:59:53.002] Updated payload                          id=0x031c5bc0748b31fa number=102 hash=57c2d3..5ce671 txs=0 withdrawals=0 gas=0 fees=0 root=96a3df..1a9391 elapsed="335.717µs"
+[el-1-geth-lighthouse] INFO [11-19|10:59:57.006] Stopping work on payload                 id=0x031c5bc0748b31fa reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|10:59:57.018] Imported new potential chain segment     number=102 hash=57c2d3..5ce671 blocks=1 txs=0 mgas=0.000 elapsed="554.843µs" mgasps=0.000 triediffs=452.66KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|10:59:57.022] Chain head was updated                   number=102 hash=57c2d3..5ce671 root=96a3df..1a9391 elapsed="79.118µs"
+[el-1-geth-lighthouse] WARN [11-19|10:59:57.022] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:00:05.002] Starting work on payload                 id=0x03cfb62ea8445e73
+[el-1-geth-lighthouse] INFO [11-19|11:00:05.003] Updated payload                          id=0x03cfb62ea8445e73 number=103 hash=e90a27..901927 txs=0 withdrawals=0 gas=0 fees=0 root=0ea90d..c549c0 elapsed="423.591µs"
+[el-1-geth-lighthouse] INFO [11-19|11:00:09.005] Stopping work on payload                 id=0x03cfb62ea8445e73 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:00:09.019] Imported new potential chain segment     number=103 hash=e90a27..901927 blocks=1 txs=0 mgas=0.000 elapsed="783.959µs" mgasps=0.000 triediffs=457.64KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:00:09.023] Chain head was updated                   number=103 hash=e90a27..901927 root=0ea90d..c549c0 elapsed="46.467µs"
+[el-1-geth-lighthouse] WARN [11-19|11:00:09.023] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:00:17.003] Starting work on payload                 id=0x03ba7ad2714d2789
+[el-1-geth-lighthouse] INFO [11-19|11:00:17.003] Updated payload                          id=0x03ba7ad2714d2789 number=104 hash=d7fbf1..d88df1 txs=0 withdrawals=0 gas=0 fees=0 root=d23db7..a630e8 elapsed="295.702µs"
+[el-1-geth-lighthouse] INFO [11-19|11:00:21.006] Stopping work on payload                 id=0x03ba7ad2714d2789 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:00:21.020] Imported new potential chain segment     number=104 hash=d7fbf1..d88df1 blocks=1 txs=0 mgas=0.000 elapsed="608.348µs" mgasps=0.000 triediffs=462.20KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:00:21.024] Chain head was updated                   number=104 hash=d7fbf1..d88df1 root=d23db7..a630e8 elapsed="54.442µs"
+[el-1-geth-lighthouse] WARN [11-19|11:00:21.024] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:00:29.002] Starting work on payload                 id=0x03aa2272a7abd08e
+[el-1-geth-lighthouse] INFO [11-19|11:00:29.003] Updated payload                          id=0x03aa2272a7abd08e number=105 hash=f88b98..f1e191 txs=0 withdrawals=0 gas=0 fees=0 root=160341..5a7f8d elapsed="678.739µs"
+[el-1-geth-lighthouse] INFO [11-19|11:00:33.006] Stopping work on payload                 id=0x03aa2272a7abd08e reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:00:33.019] Imported new potential chain segment     number=105 hash=f88b98..f1e191 blocks=1 txs=0 mgas=0.000 elapsed="611.713µs" mgasps=0.000 triediffs=466.96KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:00:33.023] Chain head was updated                   number=105 hash=f88b98..f1e191 root=160341..5a7f8d elapsed="45.615µs"
+[el-1-geth-lighthouse] WARN [11-19|11:00:33.023] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:00:41.002] Starting work on payload                 id=0x03517165ae5cbe44
+[el-1-geth-lighthouse] INFO [11-19|11:00:41.003] Updated payload                          id=0x03517165ae5cbe44 number=106 hash=094f21..6c70e2 txs=0 withdrawals=0 gas=0 fees=0 root=3d7b89..a70eb7 elapsed="326.58µs"
+[el-1-geth-lighthouse] INFO [11-19|11:00:45.006] Stopping work on payload                 id=0x03517165ae5cbe44 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:00:45.021] Imported new potential chain segment     number=106 hash=094f21..6c70e2 blocks=1 txs=0 mgas=0.000 elapsed="556.762µs" mgasps=0.000 triediffs=471.84KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:00:45.024] Chain head was updated                   number=106 hash=094f21..6c70e2 root=3d7b89..a70eb7 elapsed="44.833µs"
+[el-1-geth-lighthouse] WARN [11-19|11:00:45.025] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:00:53.002] Starting work on payload                 id=0x032d5e81b9c3cda0
+[el-1-geth-lighthouse] INFO [11-19|11:00:53.003] Updated payload                          id=0x032d5e81b9c3cda0 number=107 hash=f25551..8a2d2e txs=0 withdrawals=0 gas=0 fees=0 root=9dafe1..89c0bd elapsed="371.154µs"
+[el-1-geth-lighthouse] INFO [11-19|11:00:57.005] Stopping work on payload                 id=0x032d5e81b9c3cda0 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:00:57.020] Imported new potential chain segment     number=107 hash=f25551..8a2d2e blocks=1 txs=0 mgas=0.000 elapsed="714.745µs" mgasps=0.000 triediffs=476.91KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:00:57.023] Chain head was updated                   number=107 hash=f25551..8a2d2e root=9dafe1..89c0bd elapsed="59.07µs"
+[el-1-geth-lighthouse] WARN [11-19|11:00:57.023] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:01:05.002] Starting work on payload                 id=0x03f00e78397e6066
+[el-1-geth-lighthouse] INFO [11-19|11:01:05.003] Updated payload                          id=0x03f00e78397e6066 number=108 hash=d23b5b..2aae85 txs=0 withdrawals=0 gas=0 fees=0 root=88fc4c..6709b9 elapsed="304.676µs"
+[el-1-geth-lighthouse] INFO [11-19|11:01:09.006] Stopping work on payload                 id=0x03f00e78397e6066 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:01:09.021] Imported new potential chain segment     number=108 hash=d23b5b..2aae85 blocks=1 txs=0 mgas=0.000 elapsed="817.683µs" mgasps=0.000 triediffs=481.53KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:01:09.026] Chain head was updated                   number=108 hash=d23b5b..2aae85 root=88fc4c..6709b9 elapsed="54.372µs"
+[el-1-geth-lighthouse] WARN [11-19|11:01:09.026] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:01:17.002] Starting work on payload                 id=0x036171ef826558fe
+[el-1-geth-lighthouse] INFO [11-19|11:01:17.003] Updated payload                          id=0x036171ef826558fe number=109 hash=e0c33a..18a2b9 txs=0 withdrawals=0 gas=0 fees=0 root=f4a700..c8cc0a elapsed="341.257µs"
+[el-1-geth-lighthouse] INFO [11-19|11:01:21.006] Stopping work on payload                 id=0x036171ef826558fe reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:01:21.019] Imported new potential chain segment     number=109 hash=e0c33a..18a2b9 blocks=1 txs=0 mgas=0.000 elapsed="503.213µs" mgasps=0.000 triediffs=486.11KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:01:21.023] Chain head was updated                   number=109 hash=e0c33a..18a2b9 root=f4a700..c8cc0a elapsed="30.958µs"
+[el-1-geth-lighthouse] WARN [11-19|11:01:21.023] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:01:29.003] Starting work on payload                 id=0x031d52720c7c9dae
+[el-1-geth-lighthouse] INFO [11-19|11:01:29.003] Updated payload                          id=0x031d52720c7c9dae number=110 hash=e08fa9..1c1a79 txs=0 withdrawals=0 gas=0 fees=0 root=99f62a..ea48af elapsed="356.653µs"
+[el-1-geth-lighthouse] INFO [11-19|11:01:33.006] Stopping work on payload                 id=0x031d52720c7c9dae reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:01:33.018] Imported new potential chain segment     number=110 hash=e08fa9..1c1a79 blocks=1 txs=0 mgas=0.000 elapsed="729.694µs" mgasps=0.000 triediffs=491.03KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:01:33.021] Chain head was updated                   number=110 hash=e08fa9..1c1a79 root=99f62a..ea48af elapsed="36.397µs"
+[el-1-geth-lighthouse] WARN [11-19|11:01:33.021] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:01:41.003] Starting work on payload                 id=0x0397e2f2085610d7
+[el-1-geth-lighthouse] INFO [11-19|11:01:41.003] Updated payload                          id=0x0397e2f2085610d7 number=111 hash=34e590..344e43 txs=0 withdrawals=0 gas=0 fees=0 root=4dbe1b..215583 elapsed="372.005µs"
+[el-1-geth-lighthouse] INFO [11-19|11:01:45.005] Stopping work on payload                 id=0x0397e2f2085610d7 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:01:45.018] Imported new potential chain segment     number=111 hash=34e590..344e43 blocks=1 txs=0 mgas=0.000 elapsed="700.085µs" mgasps=0.000 triediffs=496.20KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:01:45.021] Chain head was updated                   number=111 hash=34e590..344e43 root=4dbe1b..215583 elapsed="51.246µs"
+[el-1-geth-lighthouse] WARN [11-19|11:01:45.022] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:01:53.002] Starting work on payload                 id=0x039585bd18dc8a29
+[el-1-geth-lighthouse] INFO [11-19|11:01:53.002] Updated payload                          id=0x039585bd18dc8a29 number=112 hash=3ff10c..8fd3fa txs=0 withdrawals=0 gas=0 fees=0 root=0fa6a0..4ac948 elapsed="359.822µs"
+[el-1-geth-lighthouse] INFO [11-19|11:01:57.006] Stopping work on payload                 id=0x039585bd18dc8a29 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:01:57.020] Imported new potential chain segment     number=112 hash=3ff10c..8fd3fa blocks=1 txs=0 mgas=0.000 elapsed="641.241µs" mgasps=0.000 triediffs=500.58KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:01:57.024] Chain head was updated                   number=112 hash=3ff10c..8fd3fa root=0fa6a0..4ac948 elapsed="53.229µs"
+[el-1-geth-lighthouse] WARN [11-19|11:01:57.024] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:02:05.003] Starting work on payload                 id=0x037697e3afb9c600
+[el-1-geth-lighthouse] INFO [11-19|11:02:05.003] Updated payload                          id=0x037697e3afb9c600 number=113 hash=506459..fe2a5c txs=0 withdrawals=0 gas=0 fees=0 root=c33065..578ecf elapsed="427.769µs"
+[el-1-geth-lighthouse] INFO [11-19|11:02:09.006] Stopping work on payload                 id=0x037697e3afb9c600 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:02:09.018] Imported new potential chain segment     number=113 hash=506459..fe2a5c blocks=1 txs=0 mgas=0.000 elapsed="531.636µs" mgasps=0.000 triediffs=505.72KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:02:09.022] Chain head was updated                   number=113 hash=506459..fe2a5c root=c33065..578ecf elapsed="66.093µs"
+[el-1-geth-lighthouse] WARN [11-19|11:02:09.022] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:02:17.002] Starting work on payload                 id=0x03c246dd4139994f
+[el-1-geth-lighthouse] INFO [11-19|11:02:17.003] Updated payload                          id=0x03c246dd4139994f number=114 hash=880328..26fdc2 txs=0 withdrawals=0 gas=0 fees=0 root=f2f1a6..e0f60c elapsed="332.882µs"
+[el-1-geth-lighthouse] INFO [11-19|11:02:21.006] Stopping work on payload                 id=0x03c246dd4139994f reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:02:21.022] Imported new potential chain segment     number=114 hash=880328..26fdc2 blocks=1 txs=0 mgas=0.000 elapsed=1.341ms     mgasps=0.000 triediffs=510.83KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:02:21.026] Chain head was updated                   number=114 hash=880328..26fdc2 root=f2f1a6..e0f60c elapsed="109.976µs"
+[el-1-geth-lighthouse] WARN [11-19|11:02:21.026] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:02:29.002] Starting work on payload                 id=0x0360cbcc525dde0c
+[el-1-geth-lighthouse] INFO [11-19|11:02:29.002] Updated payload                          id=0x0360cbcc525dde0c number=115 hash=6e8bf7..927cc7 txs=0 withdrawals=0 gas=0 fees=0 root=fbf7a6..fd4d02 elapsed="346.88µs"
+[el-1-geth-lighthouse] INFO [11-19|11:02:33.006] Stopping work on payload                 id=0x0360cbcc525dde0c reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:02:33.020] Imported new potential chain segment     number=115 hash=6e8bf7..927cc7 blocks=1 txs=0 mgas=0.000 elapsed="478.151µs" mgasps=0.000 triediffs=515.85KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:02:33.024] Chain head was updated                   number=115 hash=6e8bf7..927cc7 root=fbf7a6..fd4d02 elapsed="37.801µs"
+[el-1-geth-lighthouse] WARN [11-19|11:02:33.024] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:02:41.003] Starting work on payload                 id=0x03eb6287dedfbecf
+[el-1-geth-lighthouse] INFO [11-19|11:02:41.003] Updated payload                          id=0x03eb6287dedfbecf number=116 hash=eb414d..33ee0e txs=0 withdrawals=0 gas=0 fees=0 root=837864..eb4ccf elapsed="344.89µs"
+[el-1-geth-lighthouse] INFO [11-19|11:02:45.006] Stopping work on payload                 id=0x03eb6287dedfbecf reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:02:45.021] Imported new potential chain segment     number=116 hash=eb414d..33ee0e blocks=1 txs=0 mgas=0.000 elapsed="607.406µs" mgasps=0.000 triediffs=520.91KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:02:45.024] Chain head was updated                   number=116 hash=eb414d..33ee0e root=837864..eb4ccf elapsed="43.411µs"
+[el-1-geth-lighthouse] WARN [11-19|11:02:45.025] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:02:53.002] Starting work on payload                 id=0x0393ac07e2da6efa
+[el-1-geth-lighthouse] INFO [11-19|11:02:53.004] Updated payload                          id=0x0393ac07e2da6efa number=117 hash=fad56b..7c2d23 txs=0 withdrawals=0 gas=0 fees=0 root=4ef9d4..5234c1 elapsed="327.421µs"
+[el-1-geth-lighthouse] INFO [11-19|11:02:57.005] Stopping work on payload                 id=0x0393ac07e2da6efa reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:02:57.018] Imported new potential chain segment     number=117 hash=fad56b..7c2d23 blocks=1 txs=0 mgas=0.000 elapsed="691.265µs" mgasps=0.000 triediffs=525.82KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:02:57.022] Chain head was updated                   number=117 hash=fad56b..7c2d23 root=4ef9d4..5234c1 elapsed="67.797µs"
+[el-1-geth-lighthouse] WARN [11-19|11:02:57.022] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:03:05.002] Starting work on payload                 id=0x031952c0e49bdbda
+[el-1-geth-lighthouse] INFO [11-19|11:03:05.003] Updated payload                          id=0x031952c0e49bdbda number=118 hash=9fa442..1c28e9 txs=0 withdrawals=0 gas=0 fees=0 root=4cdd83..b4c68a elapsed="235.569µs"
+[el-1-geth-lighthouse] INFO [11-19|11:03:09.006] Stopping work on payload                 id=0x031952c0e49bdbda reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:03:09.021] Imported new potential chain segment     number=118 hash=9fa442..1c28e9 blocks=1 txs=0 mgas=0.000 elapsed="547.063µs" mgasps=0.000 triediffs=530.84KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:03:09.024] Chain head was updated                   number=118 hash=9fa442..1c28e9 root=4cdd83..b4c68a elapsed="33.232µs"
+[el-1-geth-lighthouse] WARN [11-19|11:03:09.025] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:03:17.002] Starting work on payload                 id=0x03d5ca8d7515c1dc
+[el-1-geth-lighthouse] INFO [11-19|11:03:17.002] Updated payload                          id=0x03d5ca8d7515c1dc number=119 hash=c85a09..bb352a txs=0 withdrawals=0 gas=0 fees=0 root=bd6cf0..bf9b6b elapsed="355.775µs"
+[el-1-geth-lighthouse] INFO [11-19|11:03:21.006] Stopping work on payload                 id=0x03d5ca8d7515c1dc reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:03:21.020] Imported new potential chain segment     number=119 hash=c85a09..bb352a blocks=1 txs=0 mgas=0.000 elapsed="525.743µs" mgasps=0.000 triediffs=535.65KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:03:21.023] Chain head was updated                   number=119 hash=c85a09..bb352a root=bd6cf0..bf9b6b elapsed="52.107µs"
+[el-1-geth-lighthouse] WARN [11-19|11:03:21.024] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:03:29.002] Starting work on payload                 id=0x0389d356919e80b5
+[el-1-geth-lighthouse] INFO [11-19|11:03:29.003] Updated payload                          id=0x0389d356919e80b5 number=120 hash=cf0594..b7e554 txs=0 withdrawals=0 gas=0 fees=0 root=88b291..80bd48 elapsed="361.375µs"
+[el-1-geth-lighthouse] INFO [11-19|11:03:33.006] Stopping work on payload                 id=0x0389d356919e80b5 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:03:33.018] Imported new potential chain segment     number=120 hash=cf0594..b7e554 blocks=1 txs=0 mgas=0.000 elapsed="521.313µs" mgasps=0.000 triediffs=540.62KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:03:33.022] Chain head was updated                   number=120 hash=cf0594..b7e554 root=88b291..80bd48 elapsed="35.747µs"
+[el-1-geth-lighthouse] WARN [11-19|11:03:33.023] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:03:41.002] Starting work on payload                 id=0x03f2176bd87b5afa
+[el-1-geth-lighthouse] INFO [11-19|11:03:41.003] Updated payload                          id=0x03f2176bd87b5afa number=121 hash=6c4086..22a0d9 txs=0 withdrawals=0 gas=0 fees=0 root=eba868..552c9f elapsed="414.554µs"
+[el-1-geth-lighthouse] INFO [11-19|11:03:45.006] Stopping work on payload                 id=0x03f2176bd87b5afa reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:03:45.018] Imported new potential chain segment     number=121 hash=6c4086..22a0d9 blocks=1 txs=0 mgas=0.000 elapsed="586.698µs" mgasps=0.000 triediffs=545.50KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:03:45.021] Chain head was updated                   number=121 hash=6c4086..22a0d9 root=eba868..552c9f elapsed="35.166µs"
+[el-1-geth-lighthouse] WARN [11-19|11:03:45.022] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:03:53.002] Starting work on payload                 id=0x035d3cbd6e6423e0
+[el-1-geth-lighthouse] INFO [11-19|11:03:53.002] Updated payload                          id=0x035d3cbd6e6423e0 number=122 hash=680936..31497a txs=0 withdrawals=0 gas=0 fees=0 root=91f722..d8056a elapsed="366.846µs"
+[el-1-geth-lighthouse] INFO [11-19|11:03:57.006] Stopping work on payload                 id=0x035d3cbd6e6423e0 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:03:57.021] Imported new potential chain segment     number=122 hash=680936..31497a blocks=1 txs=0 mgas=0.000 elapsed="787.588µs" mgasps=0.000 triediffs=550.54KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:03:57.025] Chain head was updated                   number=122 hash=680936..31497a root=91f722..d8056a elapsed="54.061µs"
+[el-1-geth-lighthouse] WARN [11-19|11:03:57.025] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:04:05.002] Starting work on payload                 id=0x0387b23fc9a90c69
+[el-1-geth-lighthouse] INFO [11-19|11:04:05.002] Updated payload                          id=0x0387b23fc9a90c69 number=123 hash=d39ca8..122a7d txs=0 withdrawals=0 gas=0 fees=0 root=9efcf5..427f24 elapsed="285.363µs"
+[el-1-geth-lighthouse] INFO [11-19|11:04:09.006] Stopping work on payload                 id=0x0387b23fc9a90c69 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:04:09.018] Imported new potential chain segment     number=123 hash=d39ca8..122a7d blocks=1 txs=0 mgas=0.000 elapsed="541.928µs" mgasps=0.000 triediffs=555.51KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:04:09.022] Chain head was updated                   number=123 hash=d39ca8..122a7d root=9efcf5..427f24 elapsed="43.882µs"
+[el-1-geth-lighthouse] WARN [11-19|11:04:09.022] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:04:17.002] Starting work on payload                 id=0x03368ec98610d2ba
+[el-1-geth-lighthouse] INFO [11-19|11:04:17.002] Updated payload                          id=0x03368ec98610d2ba number=124 hash=4af908..781da5 txs=0 withdrawals=0 gas=0 fees=0 root=dc119f..8736db elapsed="308.787µs"
+[el-1-geth-lighthouse] INFO [11-19|11:04:21.005] Stopping work on payload                 id=0x03368ec98610d2ba reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:04:21.020] Imported new potential chain segment     number=124 hash=4af908..781da5 blocks=1 txs=0 mgas=0.000 elapsed="672.26µs"  mgasps=0.000 triediffs=560.07KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:04:21.023] Chain head was updated                   number=124 hash=4af908..781da5 root=dc119f..8736db elapsed="46.196µs"
+[el-1-geth-lighthouse] WARN [11-19|11:04:21.023] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:04:29.003] Starting work on payload                 id=0x0313d10d04ebf298
+[el-1-geth-lighthouse] INFO [11-19|11:04:29.003] Updated payload                          id=0x0313d10d04ebf298 number=125 hash=f26a14..36c62d txs=0 withdrawals=0 gas=0 fees=0 root=07963b..0c8046 elapsed="323.735µs"
+[el-1-geth-lighthouse] INFO [11-19|11:04:33.005] Stopping work on payload                 id=0x0313d10d04ebf298 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:04:33.017] Imported new potential chain segment     number=125 hash=f26a14..36c62d blocks=1 txs=0 mgas=0.000 elapsed="582.759µs" mgasps=0.000 triediffs=565.30KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:04:33.021] Chain head was updated                   number=125 hash=f26a14..36c62d root=07963b..0c8046 elapsed="32.621µs"
+[el-1-geth-lighthouse] WARN [11-19|11:04:33.021] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:04:41.002] Starting work on payload                 id=0x032a8622df60cf1b
+[el-1-geth-lighthouse] INFO [11-19|11:04:41.002] Updated payload                          id=0x032a8622df60cf1b number=126 hash=64ac97..3e7f26 txs=0 withdrawals=0 gas=0 fees=0 root=7eeee8..f39040 elapsed="429.282µs"
+[el-1-geth-lighthouse] INFO [11-19|11:04:45.005] Stopping work on payload                 id=0x032a8622df60cf1b reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:04:45.020] Imported new potential chain segment     number=126 hash=64ac97..3e7f26 blocks=1 txs=0 mgas=0.000 elapsed="602.006µs" mgasps=0.000 triediffs=570.67KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:04:45.023] Chain head was updated                   number=126 hash=64ac97..3e7f26 root=7eeee8..f39040 elapsed="49.793µs"
+[el-1-geth-lighthouse] WARN [11-19|11:04:45.024] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:04:53.002] Starting work on payload                 id=0x03760c546b19e63e
+[el-1-geth-lighthouse] INFO [11-19|11:04:53.003] Updated payload                          id=0x03760c546b19e63e number=127 hash=cc53b3..bfa7bc txs=0 withdrawals=0 gas=0 fees=0 root=012ed7..ff0f7d elapsed="645.436µs"
+[el-1-geth-lighthouse] INFO [11-19|11:04:57.042] Stopping work on payload                 id=0x03760c546b19e63e reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:04:57.055] Imported new potential chain segment     number=127 hash=cc53b3..bfa7bc blocks=1 txs=0 mgas=0.000 elapsed="596.723µs" mgasps=0.000 triediffs=575.47KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:04:57.059] Chain head was updated                   number=127 hash=cc53b3..bfa7bc root=012ed7..ff0f7d elapsed="34.164µs"
+[el-1-geth-lighthouse] WARN [11-19|11:04:57.059] Nil finalized block cannot evict old blobs
+[el-1-geth-lighthouse] INFO [11-19|11:05:05.003] Starting work on payload                 id=0x03b9d26b79f8b864
+[el-1-geth-lighthouse] INFO [11-19|11:05:05.003] Updated payload                          id=0x03b9d26b79f8b864 number=128 hash=367f94..b580e7 txs=0 withdrawals=0 gas=0 fees=0 root=3a8cb3..0b8987 elapsed="352.959µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:09.065] Stopping work on payload                 id=0x03b9d26b79f8b864 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:05:09.077] Imported new potential chain segment     number=128 hash=367f94..b580e7 blocks=1 txs=0 mgas=0.000 elapsed="560.438µs" mgasps=0.000 triediffs=580.64KiB triedirty=0.00B
+[el-1-geth-lighthouse] INFO [11-19|11:05:09.096] Chain head was updated                   number=128 hash=367f94..b580e7 root=3a8cb3..0b8987 elapsed="33.302µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:17.004] Starting work on payload                 id=0x03399a8b2c76c5bd
+[el-1-geth-lighthouse] INFO [11-19|11:05:17.004] Updated payload                          id=0x03399a8b2c76c5bd number=129 hash=87efb7..3b2b12 txs=0 withdrawals=0 gas=0 fees=0 root=56b465..a30887 elapsed="368.872µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:21.005] Stopping work on payload                 id=0x03399a8b2c76c5bd reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:05:21.019] Imported new potential chain segment     number=129 hash=87efb7..3b2b12 blocks=1 txs=0 mgas=0.000 elapsed="630.367µs" mgasps=0.000 triediffs=581.08KiB triedirty=3.68KiB
+[el-1-geth-lighthouse] INFO [11-19|11:05:21.023] Chain head was updated                   number=129 hash=87efb7..3b2b12 root=56b465..a30887 elapsed="31.339µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:29.003] Starting work on payload                 id=0x03ff254ac481f43e
+[el-1-geth-lighthouse] INFO [11-19|11:05:29.004] Updated payload                          id=0x03ff254ac481f43e number=130 hash=5e69e7..2514ba txs=0 withdrawals=0 gas=0 fees=0 root=b023a5..76f918 elapsed="338.343µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:33.006] Stopping work on payload                 id=0x03ff254ac481f43e reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:05:33.019] Imported new potential chain segment     number=130 hash=5e69e7..2514ba blocks=1 txs=0 mgas=0.000 elapsed="601.617µs" mgasps=0.000 triediffs=583.16KiB triedirty=6.31KiB
+[el-1-geth-lighthouse] INFO [11-19|11:05:33.023] Chain head was updated                   number=130 hash=5e69e7..2514ba root=b023a5..76f918 elapsed="36.709µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:41.002] Starting work on payload                 id=0x03c638485a02bf83
+[el-1-geth-lighthouse] INFO [11-19|11:05:41.003] Updated payload                          id=0x03c638485a02bf83 number=131 hash=4fa087..a7db5d txs=0 withdrawals=0 gas=0 fees=0 root=cf985f..00baa9 elapsed="317.373µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:45.008] Stopping work on payload                 id=0x03c638485a02bf83 reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:05:45.026] Imported new potential chain segment     number=131 hash=4fa087..a7db5d blocks=1 txs=0 mgas=0.000 elapsed=1.060ms     mgasps=0.000 triediffs=585.00KiB triedirty=8.95KiB
+[el-1-geth-lighthouse] INFO [11-19|11:05:45.030] Chain head was updated                   number=131 hash=4fa087..a7db5d root=cf985f..00baa9 elapsed="75.341µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:53.002] Starting work on payload                 id=0x033e3d804d6b671b
+[el-1-geth-lighthouse] INFO [11-19|11:05:53.003] Updated payload                          id=0x033e3d804d6b671b number=132 hash=4f860f..a7239c txs=0 withdrawals=0 gas=0 fees=0 root=5b2190..b85cae elapsed="301.192µs"
+[el-1-geth-lighthouse] INFO [11-19|11:05:55.466] Looking for peers                        peercount=0 tried=0 static=0
+[el-1-geth-lighthouse] INFO [11-19|11:05:57.010] Stopping work on payload                 id=0x033e3d804d6b671b reason=delivery
+[el-1-geth-lighthouse] INFO [11-19|11:05:57.025] Imported new potential chain segment     number=132 hash=4f860f..a7239c blocks=1 txs=0 mgas=0.000 elapsed="564.566µs" mgasps=0.000 triediffs=586.01KiB triedirty=12.01KiB
+[el-1-geth-lighthouse] INFO [11-19|11:05:57.029] Chain head was updated                   number=132 hash=4f860f..a7239c root=5b2190..b85cae elapsed="31.9µs"
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.002] Starting work on payload                 id=0x03a1ccae04559127
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.003] Updated payload                          id=0x03a1ccae04559127 number=133 hash=388b32..fb5e05 txs=0 withdrawals=0 gas=0 fees=0 root=fe619e..a6938d elapsed="648.22µs"
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.521] Got interrupt, shutting down...
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.521] HTTP server stopped                      endpoint=[::]:8545
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.521] HTTP server stopped                      endpoint=[::]:8546
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.522] HTTP server stopped                      endpoint=[::]:8551
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.522] IPC endpoint closed                      url=/data/geth/execution-data/geth.ipc
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.522] Ethereum protocol stopped
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.522] Transaction pool stopped
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.522] Persisting dirty state                   head=132 root=5b2190..b85cae layers=132
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.528] Persisted dirty state to file            path=/data/geth/execution-data/geth/triedb/merkle.journal size=574.67KiB elapsed=5.220ms
+[el-1-geth-lighthouse] INFO [11-19|11:06:05.529] Blockchain stopped
