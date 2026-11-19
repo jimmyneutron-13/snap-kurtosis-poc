@@ -129,6 +129,10 @@ jobs:
           docker image prune -f # buang stage builder yang menggantung
           df -h; docker system df
 
+      - name: Smoke test image geth (binary harus bisa jalan di alpine)
+        run: |
+          docker run --rm poc-snap-geth:b05eff09 version
+
       - name: Build attacker snap
         run: |
           cd attacker
